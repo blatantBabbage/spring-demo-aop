@@ -13,4 +13,10 @@ public class MyDemoLoggingAspect {
     public void beforeAddAccountAdvice() {
         System.out.println("\n======>>>> Executing @Before advice on addAccount()");
     }
+
+    // enables aspect to be executed before addAccount method having only Account param
+    @Before("execution(* addAccount(com.nitesh.aopdemo.Account))")
+    public void beforeAccountAdvice() {
+        System.out.println("\n======>>>> Executing @Before advice on addAccount()");
+    }
 }
