@@ -8,6 +8,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class MyDemoLoggingAspect {
 
+    // enables aspect to be executed before addAccount method in any class
     @Before("execution(public void addAccount())")
     public void beforeAddAccountAdvice() {
         System.out.println("\n======>>>> Executing @Before advice on addAccount()");
